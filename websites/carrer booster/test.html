@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrer Booster</title>
+    <link rel="stylesheet" href="carrer-style.css">
+    <style>
+        /* Hamburger icon styles */
+        .hamburger {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            height: 24px;
+            cursor: pointer;
+            z-index: 101;
+        }
+        
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color: #000;
+            border-radius: 2px;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .hamburger span:nth-child(1) {
+            top: 0;
+        }
+        
+        .hamburger span:nth-child(2),
+        .hamburger span:nth-child(3) {
+            top: 11px;
+        }
+        
+        .hamburger span:nth-child(4) {
+            bottom: 0;
+        }
+        
+        /* Media query for small screens */
+        @media screen and (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" id="logo-link"><h1 class="logo">Carrer Booster</h1></a>
+        <div class="hamburger" id="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#teachers" class="nav-link">Teachers</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <script>
+        // Script to toggle the navigation menu on clicking the hamburger icon
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const navMenu = document.querySelector('nav');
+        
+        hamburgerIcon.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

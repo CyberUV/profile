@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+     <nav>
+        <div class="logo"><h1 id="tecno">TECNO</h1></div>
+        <div class="nav-link">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Phone</a></li>
+                <li><a href="#">Acessories</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </div>
+     </nav>
+     <div class="information">
+        <div class="overlay"></div>
+        <img src="mobile.png" class="mobile" alt="">
+        <div id="circle">
+            <div class="feature one">
+              <img src="camera.png" alt="">
+              <div>
+                <h1>camera</h1>
+                 <p>12mp, wide angle Lens</p>
+              </div></div>
+            <div class="feature two">
+              <img src="processor.png" alt="">
+              <div>
+                <h1>processor</h1>
+                 <p>Snap Dragon, 12mhz</p>
+              </div>
+            </div>
+            <div class="feature three">
+              <img src="display.png" alt="">
+              <div>
+                <h1>display</h1>
+                 <p>Ips display, With Guard</p>
+              </div>
+            </div>
+            <div class="feature four">
+              <img src="battery.png" alt="">
+              <div>
+                <h1>battery</h1>
+                 <p>10000MH, long-lasting</p>
+              </div>
+            </div>
+        </div>
+     </div>
+
+     <div class="control">
+        <img src="arrow.png" alt="" id="upbtn">
+        <h3>features</h3>
+        <img src="arrow.png" alt="" id="downbtn">
+     </div>
+    </div>
+    <script>
+        var circle = document.getElementById("circle");
+        var upbtn = document.getElementById("upbtn");
+        var downbtn = document.getElementById("downbtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upbtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downbtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+
+    </script>
+
+
+</body>
+</html>
