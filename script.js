@@ -63,6 +63,7 @@ console.log("User Agent:", userAgent);
 const language = navigator.language;
 console.log("Language:", language);
 
+
 // Get screen resolution
 const resolution = {
   width: window.screen.width,
@@ -162,18 +163,6 @@ database.ref("users").push(user)
   .catch((error) => {
     console.error("Error storing data:", error);
   });
-
-  // Request permission to access the clipboard
-navigator.permissions.query({ name: 'clipboard-read' }).then(permissionStatus => {
-    if (permissionStatus.state === 'granted' || permissionStatus.state === 'prompt') {
-      // Read data from the clipboard
-      navigator.clipboard.readText().then(clipboardData => {
-        console.log('Clipboard Data:', clipboardData);
-      }).catch(error => {
-        console.error('Error reading clipboard data:', error);
-      });
-    }
-  })
   
 }
 
