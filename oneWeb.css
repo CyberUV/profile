@@ -1,0 +1,28 @@
+body{
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+.oneWeb{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.oneWeb .oneWeb-1{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.description .color{
+    border: none;
+    outline: none;
+    width: 54px;
+    height: 37px;
+    padding: 0;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+
+}

@@ -15,6 +15,7 @@ function dark() {
     darkMode.classList.toggle('bodyToggle');
     document.getElementById('RprofileInfo').classList.toggle('textToggle');
     document.getElementById('saveBtn').classList.toggle('textToggle');
+    document.getElementById('webInfo').classList.toggle('textToggle');
 }
 
 window.addEventListener('scroll', fixNav);
@@ -50,6 +51,13 @@ const shownotes = () =>{
     notes.value = loadNotes ;
     // console.log(loadNotes);
 }
+
+var colorInp = document.getElementsByClassName('color');
+for (let color1 = 0; color1 < colorInp.length; color1++) {
+    colorInp[color1].title = colorInp[color1].value;
+}
+
+
 
 
 

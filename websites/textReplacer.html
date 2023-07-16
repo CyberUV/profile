@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Replacer</title>
+  <style>
+    body {
+      background: #2b2b2b;
+    font-family: 'Poppins', sans-serif;
+    color: orange;
+  margin: 20px;
+}
+
+textarea, input[type="text"] {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+pre {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Text Replacer</h1>
+    <textarea id="textInput" rows="10" cols="50" placeholder="Enter your text here"></textarea>
+    <br>
+    <input type="text" id="searchInput" placeholder="Word to replace">
+    <input type="text" id="replaceInput" placeholder="Replacement word">
+    <br>
+    <button id="replaceButton">Replace</button>
+    <br>
+    <pre id="output"></pre>
+  </div>
+
+  <script>
+    // Function to replace text
+function replaceText() {
+  var textInput = document.getElementById("textInput");
+  var searchInput = document.getElementById("searchInput");
+  var replaceInput = document.getElementById("replaceInput");
+  var output = document.getElementById("output");
+
+  var text = textInput.value;
+  var searchWord = searchInput.value;
+  var replaceWord = replaceInput.value;
+
+  // Perform the replacement using regular expression with global flag
+  var regex = new RegExp(searchWord, "g");
+  var replacedText = text.replace(regex, replaceWord);
+
+  // Display the replaced text
+  output.textContent = replacedText;
+}
+
+// Attach event listener to the Replace button
+var replaceButton = document.getElementById("replaceButton");
+replaceButton.addEventListener("click", replaceText);
+
+  </script>
+</body>
+</html>

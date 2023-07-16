@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using a CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" />
+
+
+    <link rel="stylesheet" href="oneWeb.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main pa3">
+        <nav class="">
+            <div class="container flex justify-around">
+
+                <span id="logo" class="">CyberUV
+                    
+                </span>
+                <div class="nav-links" id="test816">
+                    <a class="links" href="index.html">Home</a>
+                    <a class="links nav-links-active" href="website.html" >Websites</a>
+                    <a class="links" href="#" >About</a>
+                    <a class="links" href="#">Other</a>
+                    <div type="checkbox" name="darkMode" id="darkMode" onclick="dark()" >
+                         <div id="circle" ></div>
+                    </div>
+                </div>
+                <div class="ham" id="ham" onclick="navShow()">
+                    <span  class="ham-lines ham1"  id="ham1"></span>
+                    <span class="ham-lines ham3" id="ham2"></span>
+                    <span class="ham-lines ham2" id="ham3"></span>
+                </div>
+            </div>
+
+            <div class="oneWeb">
+                <h1>E-commerce Websites</h1>
+                <div class="oneWeb-1">
+                    <div class="imgs">
+                        <img src="img/Screenshot 2023-07-15 123611.png" width="600px"  alt="">
+                    </div>
+                    <div class="description">
+                        <h3>Description</h3><br>
+                        <span>This website is a e-commerce website for Retailer store, Cloth Store, Mobile Store etc</span><br>
+                        <span>Colors which are used in this website</span>
+                        <span class="colorBox"><input type="color" disabled class="color" value="#f7f8f9" title="#f7f8f9">
+                            <input type="color" disabled class="color" value="#fd5353">
+                            <input type="color" disabled class="color" value="#415161">
+                            <input type="color" disabled class="color" value="#ffffff">
+                            <input type="color" disabled class="color" value="#f7f8f9">
+                            <input type="color" disabled class="color" value="#f5f5f5">
+                            <input type="color" disabled class="color" value="#7e7f85">
+                            <input type="color" disabled class="color" value="#0000ee">
+                            <input type="color" disabled class="color" value="#393a56">
+                            <input type="color" disabled class="color" value="#000000">
+                            <input type="color" disabled class="color" value="#ffffff">
+                            <input type="color" disabled class="color" value="#000000">
+                            </span>
+
+                        </div>
+                    </div>
+
+                  <img src="img/Screenshot 2023-07-15 123611.png" alt="">
+            </div>
+        </nav>
+       
+
+       
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          Prism.highlightAll();
+        });
+      </script>
+      
+      <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <script src="script.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script>
+   
+    <script src="firebase.js"></script>
+
+ 
+
+</body>
+</html>
