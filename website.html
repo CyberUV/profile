@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main pa3">
+        <nav class="">
+            <div class="container flex justify-around">
+
+                <span id="logo" class="">CyberUV
+                    <!-- जय श्री राम -->
+                </span>
+                <div class="nav-links" id="test816">
+                    <a class="links" href="index.html">Home</a>
+                    <a class="links nav-links-active" href="website.html" >Websites</a>
+                    <a class="links" href="#" >About</a>
+                    <a class="links" href="#">Other</a>
+                    <div type="checkbox" name="darkMode" id="darkMode" onclick="dark()" >
+                         <div id="circle" ></div>
+                    </div>
+                </div>
+                <div class="ham" id="ham" onclick="navShow()">
+                    <span  class="ham-lines ham1"  id="ham1"></span>
+                    <span class="ham-lines ham3" id="ham2"></span>
+                    <span class="ham-lines ham2" id="ham3"></span>
+                </div>
+            </div>
+        </nav>
+       
+
+       
+    </div>
+    <script src="script.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script>
+   
+    <script src="firebase.js"></script>
+
+ 
+
+</body>
+</html>

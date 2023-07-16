@@ -74,7 +74,7 @@ nav {
     left: 0;
     right: 0;
     transition: all .3s ease-in-out;
-    
+    z-index: 1000;
     
 }
 
@@ -97,7 +97,24 @@ nav {
   transition: 0.8s;
 }
 .nav-links a:hover{
-    color: rgb(252, 220, 160);
+    color: orange;
+}
+.nav-links-active{
+    color: orange; 
+}
+.nav-links-active::after{
+    content: "";
+    display: block;
+    background-color: orange;
+    border-radius: 5px 0 5px 0px;
+    height: 4px;
+}
+.nav-links a:hover::after{
+    content: "";
+    display: block;
+    background-color: orange;
+    border-radius: 5px 0 5px 0px;
+    height: 4px;
 }
 
 /* nav.active {
@@ -166,7 +183,89 @@ nav a {
 .profileInfo{
     color: #787777;
 }
+.sec2{
+    display: flex;
+    flex-direction: column;
+   
+}
+.webCase{
+    display: flex;
+    position: relative;
+   width: 400px;
+   height: 225px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+}
+.webCase:hover .webInfo{
+    display: flex;
+}
+
+.webInfo{
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(43, 43, 43, 0.865);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    display: none;
+    transition: all 0.8s;
+}
+
+.webInfo h3{
+    color: #ffffff;
+    margin-left: 8px;
+    margin-top: 19px;
+    font-size: 30px;
+    /* font-size: 30px; */
+    
+}
+.webInfo ul{
+    color: #c2c2c2;
+    padding: 5px 40px;
+}
+.webInfo a{
+    margin: 15px auto;
+    outline: none;
+    display: flex;
+    justify-content: center;
+
+}
+.webInfo button{
+    width: 10rem;
+    height: 2rem;
+    outline: none;  
+    border: none; 
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: end;
+    color: orange;
+    transition: all 0.8s;
+    /* margin: 5px ; */
+}
+.webInfo button:hover{
+    background-color: orange;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
     @media screen and (max-width: 760px) {
+        .webInfo{
+
+        }
         .sec1{
             flex-direction: column;
             width: auto;
