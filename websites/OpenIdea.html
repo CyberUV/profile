@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="OpenIdea.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+        </style> 
+    <title>Rudraksh Profile</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="main pa3">
+        <nav class="">
+            <div class="container flex justify-around">
+
+                <span id="logo" class="">CyberUV
+                    <!-- जय श्री राम -->
+                </span>
+                <div class="nav-links" id="test816">
+                    <a class="links" href="../index.html">Home</a>
+                    <a class="links" href="#" >Websites</a>
+                    <a class="links" href="#" >About</a>
+                    <a class="links" href="#">Other</a>
+                    <div type="checkbox" name="darkMode" id="darkMode" onclick="dark()" >
+                         <div id="circle" ></div>
+                    </div>
+                </div>
+                <div class="ham" id="ham" onclick="navShow()">
+                    <span  class="ham-lines ham1"  id="ham1"></span>
+                    <span class="ham-lines ham3" id="ham2"></span>
+                    <span class="ham-lines ham2" id="ham3"></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="head" style="margin-top: 100px;">
+            <!-- <span><strong>Hello Buddy</strong>, If you have any keen desire to Create your own website for free without coding. Then you are on right place. fill these detailes so that <strong style="color: greenyellow;">We can contact you</strong>. After that just write you idea or dream website.</span> -->
+            <span style="font-family: 'Black Ops One', cursive;"><strong>Hello,</strong> If you have a keen desire to create your own website without coding, you are in the right place.</span>
+            <button onclick="showInst()">Instruction</button>
+
+            <div class="instruction" id="instruction">
+                <ul style="margin: 18px;" class="shadow-5 pa3 ">
+                    <li>Enter your username that you want to share with the community.</li>
+                    <li>After that, enter your <span class="symbol">&#9993;</span> email, <span class="symbol">&#x260E;</span> contact, and <span class="symbol">&#x1F510;</span>password in the respective fields.</li>
+                    <li>We collect your email and contact number solely for communication regarding your website.</li>
+                  </ul>
+            </div>
+
+            <script>function showInst() {
+                document.getElementById('instruction').classList.toggle('instSHow');
+                console.log("wordo")
+            }</script>
+            <!-- <span>Please fill in the following details so that <strong style="color: green;">we can contact you</strong>.</span>
+            <span> After that, simply share your idea or dream website with us.</span> -->
+        </div>
+       
+       <section style="margin-top: 10px;">
+        <div class="login">
+            <input type="text" class="inp" name="username" id="name-input" placeholder="User Name" required>
+            <input type="email" class="inp" name="email" id="email-input" placeholder="User Email" required>
+            <input type="tel" class="inp" name="password" id="mob-input" placeholder="Contact No." required>
+            <input type="password" class="inp" name="password" id="pass-input" placeholder="Password" required>
+         
+            <!-- <input type="submit" id="submit"> -->
+              </div> 
+              <div id="chat-container">
+                
+          
+                  <div id="message-container"></div>
+               
+                
+               <div class="msage">
+                <input type="text" id="message-input" placeholder="Type your message...">
+                <button id="send-button">Send</button>
+               
+               </div>
+              </div>
+       </section>
+          
+    </div>
+
+
+
+    
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+    <script src="../script.js"></script>
+    <script src="OpenIdea.js"></script>
+
+</body>
+</html>
