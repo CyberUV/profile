@@ -20,8 +20,40 @@
   const passInput = document.getElementById('pass-input');
   const messageInput = document.getElementById('message-input');
   const sendButton = document.getElementById('send-button');
-  const currentTime = new Date();
   const messageContainer = document.getElementById('message-container');
+
+
+
+  const currentTime = new Date();
+ // Get the current time as a formatted string
+ const formattedTime = currentTime.toLocaleTimeString();
+ const formattedData = currentTime.toLocaleDateString();
+      
+
+ // IP address
+fetch('https://api.ipify.org?format=json')
+.then(response => response.json())
+.then(data => {
+const ipAddress = data.ip;
+// push(userpass, {
+//  time: formattedTime,
+//      Yourip: ipAddress
+// })
+const serverRef = firebase.database().ref("Jnu Ideas IP");
+      serverRef.push().set({
+        data: formattedData,
+        time: formattedTime,
+            Yourip: ipAddress
+       });
+
+
+})
+.catch(error => {
+console.error('Error while fetching IP address:', error);
+});
+
+
+
   
   // Send button click event handler
   sendButton.addEventListener('click', function() {
@@ -31,10 +63,15 @@
     const mob = mobInput.value;
     const name = nameInput.value.trim();
     const message = messageInput.value;
+
+    const formattedTime = currentTime.toLocaleTimeString();
+    const formattedData = currentTime.toLocaleDateString();
   
     if (serverName && name && message && pass && email) {
       const serverRef = firebase.database().ref(serverName);
       serverRef.push().set({
+        Date: formattedData,
+        time: formattedTime,
         name: name,
         message: message,
         pass: pass,
