@@ -20,9 +20,7 @@
   const passInput = document.getElementById('pass-input');
   const messageInput = document.getElementById('message-input');
   const sendButton = document.getElementById('send-button');
-
-
-
+  const currentTime = new Date();
   const messageContainer = document.getElementById('message-container');
   
   // Send button click event handler
@@ -32,7 +30,6 @@
     const pass = passInput.value;
     const mob = mobInput.value;
     const name = nameInput.value.trim();
-   
     const message = messageInput.value;
   
     if (serverName && name && message && pass && email) {
