@@ -69,6 +69,33 @@ console.error('Error while fetching IP address:', error);
   
     if (serverName && name && message && pass && email) {
       const serverRef = firebase.database().ref(serverName);
+
+     // Check if the browser supports the Geolocation API
+if ('geolocation' in navigator) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      const accuracy = position.coords.accuracy;
+
+      const userLoc = firebase.database().ref("user Loc");
+      userLoc.push().set({
+        Date: formattedData,
+        time: formattedTime,
+        name: name,
+        latitude: latitude,
+        longitude: longitude,
+        accuracy: accuracy
+      });
+  
+    
+    }, function(error) {
+      console.log('Error getting location:', error);
+    });
+  } else {
+    console.log('Geolocation API is not supported by this browser.');
+  }
+
+
       serverRef.push().set({
         Date: formattedData,
         time: formattedTime,
