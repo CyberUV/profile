@@ -39,3 +39,28 @@ const savedata = (e)=>{
 
     // costume userId = 
 }
+
+// Reference to Firebase Storage bucket
+const storage = firebase.storage();
+const storageRef = storage.ref();
+
+const downloadButton = document.getElementById("downloadButton");
+
+downloadButton.addEventListener("click", () => {
+  // Replace 'your-document-path' with the path to your document in Firebase Storage.
+  const fileRef = storageRef.child("gs://myprofile-2ccc5.appspot.com/Coke-Studio-Season-14-Pasoori-Ali-Sethi-x-Shae-Gill.m4a");
+
+  fileRef.getDownloadURL()
+    .then((url) => {
+      // Create a hidden link and trigger a click to download the file.
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "document.pdf"; // Change the filename as needed.
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    })
+    .catch((error) => {
+      console.error("Error downloading file: ", error);
+    });
+});
